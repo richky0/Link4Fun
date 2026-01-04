@@ -1,8 +1,42 @@
-    # Masuk ke folder io
+name: Build Flutter iOS Simulator
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_ios_simulator:
+    runs-on: macos-latest
+
+    steps:
+    # 1️⃣ Checkout repo
+    - uses: actions/checkout@v4
+
+    # 2️⃣ Setup Flutter
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.13.0' # ganti sesuai versi Flutter kamu
+
+    # 3️⃣ Install dependencies Flutter
+    - name: Flutter pub get
+      run: flutter pub get
+
+    # 4️⃣ Prepare iOS Pods
     - name: Prepare iOS Pods
       run: |
         cd ios
         pod init || echo "Podfile already exists"
-        # Ubah deployment target menjadi iOS 12
         sed -i '' "s/platform :ios, '.*'/platform :ios, '12.0'/g" Podfile || echo "Set platform to 12"
         pod install
+        cd ..
+
+    # 5️⃣ Build Flutter iOS simulator (unsigned)
+    - name: Build iOS Simulator
+      run: flutter build ios --simulator
+
+    # 6️⃣ Upload built .app to GitHub
+    - name: Upload iOS Simulator build
+      uses: actions/upload-artifact@v4
+      with:
+        name: ios-simulator-app
+        path: build/ios/iphonesimulator/Runner.app
