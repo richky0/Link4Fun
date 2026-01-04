@@ -1,4 +1,4 @@
-name: Build iOS IPA (Unsigned)
+name: Build Flutter iOS Unsigned IPA
 
 on:
   workflow_dispatch:
@@ -8,24 +8,25 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    # 1. Checkout repo
+    # 1️⃣ Checkout repo
     - uses: actions/checkout@v4
 
-    # 2. Setup Flutter
+    # 2️⃣ Setup Flutter
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.13.0' # sesuaikan versi Flutter kamu
 
-    # 3. Install dependencies
+    # 3️⃣ Install dependencies
     - name: Install dependencies
       run: flutter pub get
 
-    # 4. Build iOS unsigned IPA
-    - name: Build iOS IPA (unsigned)
-      run: flutter build ipa --release --no-codesign
+    # 4️⃣ Build iOS unsigned IPA (untuk simulator / generic device)
+    - name: Build iOS unsigned IPA
+      run: |
+        flutter build ios --release --no-codesign
 
-    # 5. Upload IPA supaya bisa di-download
+    # 5️⃣ Upload hasil build ke GitHub
     - name: Upload IPA
       uses: actions/upload-artifact@v4
       with:
