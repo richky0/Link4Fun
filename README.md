@@ -187,8 +187,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Richky Sung**
-- GitHub: [@RichkySung](https://github.com/RichkySung)
-- Email: richky.sung@example.com
+- GitHub: @richky0
+- Email: richky61@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -204,8 +204,4 @@ If you like this project, please give it a star ⭐ on GitHub!
 
 <div align="center">
   
-Made with ❤️ by Richky Sung | Built with Flutter
-
-[Report Bug](https://github.com/RichkySung/link4fun/issues) · [Request Feature](https://github.com/RichkySung/link4fun/issues)
-
 </div>
