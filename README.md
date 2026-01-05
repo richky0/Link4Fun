@@ -7,7 +7,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Version](https://img.shields.io/badge/Version-2.0.0-orange)
+![Version](https://img.shields.io/badge/Version-1.0.0-orange)
 
 **Hello**
 
