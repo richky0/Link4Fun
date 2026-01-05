@@ -13,9 +13,9 @@ dependencies:
 
   shared_preferences: ^2.2.0
   url_launcher: ^6.1.0
-  qr_flutter: ^4.1.0  # Versi yang sudah teruji
+  qr_flutter: ^4.1.0  
   path_provider: ^2.0.0
-  # HAPUS share_plus untuk menghindari error
+  
 
 dev_dependencies:
   flutter_test:
