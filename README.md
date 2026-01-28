@@ -15,7 +15,7 @@
 
 ##  **v1.0.0**
 
-### 🔍 **Smart Search with Highlighting**
+###  **Smart Search with Highlighting**
 - Real-time search with text highlighting
 - Search across titles and URLs simultaneously
 - Search results counter with beautiful badge
