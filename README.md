@@ -381,7 +381,7 @@ git push origin feature/your-feature
 # 5. Create Pull Request
 ```
 
-## 📝 **Code Quality**
+##  **Code Quality**
 
 ### **Best Practices Followed**
 -  Null safety (Dart 3.0)
